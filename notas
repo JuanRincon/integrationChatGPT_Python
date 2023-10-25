@@ -1,0 +1,30 @@
+Lo primero es crear una cuenta en la página de openAI para desarrolladores ingresando por
+https://platform.openai.com/
+Luego del proceso de registro la para comunicar nuestro entorno de desarrollo de manera
+automática con openAI en la plataforma vamos a personal en la parte superior derecha, e ingresamos a view API keys, se le da la opción de crear nueva API key y se copia la que nos salga, luego instala el entonrno virtual dotenv de python y la aplicación de openAI en la terminal de la siguiente manera:
+
+pip install python-dotenv
+pip install openAI
+
+Creamos un archivo .env con lo siguiente:
+
+OPENAI_API_KEY=En_esta_parte_ponemos_nuestra_APIKEY   //En esta parte se copia la API key de la plataforma de openAI
+
+Creamos el archivo miPrograma.py con lo ste:
+
+import os
+import openai
+from dotenv import load_dotenv
+
+load_dotenv()
+
+api_key = os.getenv('OPENAI_APY_KEY')
+openai.api_key = api_key
+
+modelos = openai.Model.list()
+print(modelos)
+
+Luego para validar que todo ha salido bien se ejecuta el archivo en la terminal con python3 miPrograma.py
+lo que deberá mostrar el listado de modelos que contiene la API de openAI
+
+
