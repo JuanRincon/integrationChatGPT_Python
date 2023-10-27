@@ -28,4 +28,4 @@ modelo_spacy = spacy.load("es_core_news_md")
 analisis = modelo_spacy(texto_generado)
 
 for token in analisis:
-    print(token.text)  #Este ciclo for muestra cada uno de los tokens que componen el texto
+    print(token.text, token.pos_)  #Este ciclo for muestra cada uno de los tokens que componen el texto, pero añadiendo , token.pos_ nos trae la categoria gramatical de cada token
