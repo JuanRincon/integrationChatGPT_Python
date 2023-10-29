@@ -64,3 +64,14 @@ Para procesar y analizar las respuestas de chatGPT realizamos tres pasos
       python3 -m spacy download es_core_news_md
   2. Utilizar la información extraída
   3. Iterar y mejorar la interaccíon
+  
+CREAR CHATBOT CON CHATGPT
+
+Pasos:
+
+1. Importar bibliotecas y configurar clave
+2. Función para peticiones
+3. Funcionamiento básico
+4. Ejecutar chatbot
+
+
